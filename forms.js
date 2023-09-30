@@ -59,5 +59,5 @@ function createPhotoTable() {
         row.appendChild(cell);
     });
 
-    document.body.appendChild(table);
+    document.body.appendChild(table); //h
 }
