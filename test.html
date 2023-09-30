@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+    <head>
+        <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
+        <LINK REL="img" TYPE="text/css" HREF="theme.css">
+        <meta charset="utf-8">
+        <title>Рузманов Владислав</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <nav>
+                <ol>
+                    <div style="float:left" class="headerText">
+                        <li><a href="./main.html">Главная</a></li>
+                        <li><a href="./about_me.html">Обо мне</a></li>
+                        <li><a href="./my_interests.html">Мои интересы</a></li>
+                    </div>
+                    <div style="float:left" class="headerText">
+                        <li><a href="./study.html">Учеба</a></li>
+                        <li><a href="./photobook.html">Фотоальбом</a></li>
+                        <li><a href="./contact.html">Контакт</a></li>
+                    </div>
+                    <div style="float:left" class="headerText">
+                        <li><a href="./test.html">Тест по основам дискретной математики</a></li> 
+                    </div>
+                </ol>
+            </nav>
+        </header>
+        <div class="middleDiv">
+            <div class="form" >
+                <h1>Пройдите тест по основам дискретной математики!<br></h1>
+                <form METHOD=post action = mailto:alinapirajoke@gmail.com>
+                    <div>
+                        <p>Каково количество различных перестановок букв в слове “MATH”?</p>
+                        <input name="radio" type=radio value="1">6</input>
+                        <input name="radio" type=radio value="2">12</input>
+                        <input name="radio" type=radio value="3">24</input>
+                        <input name="radio" type=radio value="4">120</input>
+                    </div>
+                    <div>
+                        <p>Какое максимальное количество ребер может быть в простом графе с n вершинами?</p>
+                        <select name="select" size=1>
+                        <option value=1>n - 1
+                        <option value=2>n(n - 1) / 2
+                        <option value=3>n(n + 1) / 2
+                        <option value=4>n^2 - n
+                        <option value=5>n^2 + n
+                        </select>
+                    </div>
+                    <div>
+                        <p>Каково количество различных графов, которые можно построить на множестве из 3 вершин?</p>
+                        <textarea name="textarea" rows=2 placeholder="Ответ">
+                        </textarea>
+                    </div>
+                    <div>
+                        <p>Введите ваше фио</p>
+                        <textarea name="textarea" placeholder="Ответ">
+                        </textarea>
+                    </div>
+                    <div>
+                        <p>Введите вашу группу</p>
+                        <select name="select" size=1>
+                        <option value=1>ИС/б-21-1-о</option>
+                        <option value=2>ИС/б-21-2-о</option>
+                        <option value=3>ИС/б-21-3-о</option>
+                        <option value=4>ПИ/б-21-1-о</option>
+                        <option value=5>ИС/б-20-1-о</option>
+                        <option value=6>ИС/б-20-2-о</option>
+                        <option value=7>ИС/б-20-3-о</option>
+                        <option value=8>ПИ/б-20-1-о</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 20px; display:inline-block; style: float">
+                        <button type=submit value="Проверить">Отправить</button>
+			<button type=button onClick="window.location.reload();" value="Очистить">Очистить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

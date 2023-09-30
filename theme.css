@@ -1,0 +1,91 @@
+.header{
+    background-color: rgb(175, 175, 155);
+    height: 100px;
+    border-radius: 10px;
+}
+
+.headerText{
+    color:rgb(46, 46, 46);
+    margin: 20px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: rgb(36, 36, 36);
+  }
+  
+  a:visited {
+    color: rgb(76, 76, 76);
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    color: rgb(20, 20, 20);
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;
+    color: rgb(20, 20, 20);
+  }
+  
+  a:active {
+    background: rgb(50, 50, 50);
+    border-radius: 5px;
+  }
+
+  .stdText{
+    color:rgb(46, 46, 26);
+    text-indent: 20px;
+    margin-left:20px
+  }
+
+  .stdTextList{
+    color:rgb(106, 106, 106);
+    margin-left:20px
+  }
+
+.form{
+  padding: 30px;
+  background-color: rgb(175, 175, 155);
+  border-radius: 30px;
+  color:rgb(46, 46, 26);
+  display: block;
+  justify-content: center;
+}
+
+.middleDiv{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.piece{
+  margin-top: 100px;
+}
+
+.table{
+  margin: 10px;
+  border-color: black;
+  text-align: center;
+}
+
+.table th, .table td{
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+.tablePhoto{
+  margin: 10px;
+  text-align: center;
+}
+
+.tablePhoto th, .tablePhoto td{
+  text-align: center;
+}
