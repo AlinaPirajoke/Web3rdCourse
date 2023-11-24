@@ -3,19 +3,27 @@
         <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
         <LINK REL="img" TYPE="text/css" HREF="theme.css">
         <script src="scripts/contact.js"></script>
+        <script src="scripts/time.js"></script>
         <meta charset="utf-8">
         <title>Рузманов Владислав</title>
-    </head>
+    </head >
 
-    <body>
-
+    <body onload="showDate()">
+        
         <header class="header">
             <nav>
                 <ol>
                     <div style="float:left" class="headerText">
                         <li><a href="./main.html">Главная</a></li>
                         <li><a href="./about_me.html">Обо мне</a></li>
-                        <li><a href="./my_interests.html">Мои интересы</a></li>
+                        <li class="dropdown">
+                            <a href="./my_interests.html">Мои интересы</a>
+                            <ol class="dropdown-content">
+                                <li><a href="./my_interests.html#Программирование">Программирование</a></li>
+                                <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
+                                <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
+                            </ol>
+                        </li>       
                     </div>
                     <div style="float:left" class="headerText">
                         <li><a href="./study.html">Учеба</a></li>
@@ -25,6 +33,7 @@
                     <div style="float:left" class="headerText">
                         <li><a href="./test.html">Тест по основам дискретной математики</a></li> 
                     </div>
+                    <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
                 </ol>
             </nav>
         </header>

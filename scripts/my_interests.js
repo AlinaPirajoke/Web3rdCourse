@@ -26,7 +26,7 @@ function printElement(label, ...pars){
     var content = document.getElementById("content");
     var page = document.getElementById("page");
     
-    var div = document.createElement("div");
+    var div = document.getElementById(label);
     div.setAttribute("class", "piece");
     div.id = label;
 
@@ -39,8 +39,6 @@ function printElement(label, ...pars){
         par.textContent = pars[p];
         div.appendChild(par);
     }
-
-    page.appendChild(div);
 
     var contentP = document.createElement("li");
     var contentLink = document.createElement("a");
