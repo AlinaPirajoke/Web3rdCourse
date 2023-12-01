@@ -1,3 +1,11 @@
+
+window.addEventListener('load', () => { 
+    var phoneInput = document.getElementById("phone");
+    phoneInput.addEventListener("blur", validatePhoneInput);
+    var nameInput = document.getElementById("fio");
+    nameInput.addEventListener("blur", validateNameInput);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -55,6 +63,7 @@ function isValidName(name) {
 }
 
 function isValidPhone(phone) {
+
     if (phone.length < 9 || phone.length > 12) {
         console.log("Проёб по 1му пункту")
         return false;
@@ -77,5 +86,46 @@ function isValidPhone(phone) {
         }
     }
 
+    console.log("Всё хорошо")
+
     return true;
 }
+
+function validatePhoneInput() {
+    var input = document.getElementById("phone");
+    var value = input.value;
+    
+    if (value === "") {
+      // Если поле пустое, удаляем любые предыдущие классы
+      input.classList.remove("valid");
+      input.classList.remove("invalid");
+    } else if (isValidPhone(value)) {
+      // Если данные введены корректно, устанавливаем класс "valid"
+      input.classList.remove("invalid");
+      input.classList.add("valid");
+    } else {
+      // Если данные введены некорректно, устанавливаем класс "invalid"
+      input.classList.remove("valid");
+      input.classList.add("invalid");
+    }
+  }
+
+  function validateNameInput() {
+    var input = document.getElementById("fio");
+    var value = input.value;
+    
+    if (value === "") {
+      // Если поле пустое, удаляем любые предыдущие классы
+      input.classList.remove("valid");
+      input.classList.remove("invalid");
+    } else if (isValidName(value)) {
+      // Если данные введены корректно, устанавливаем класс "valid"
+      input.classList.remove("invalid");
+      input.classList.add("valid");
+    } else {
+      // Если данные введены некорректно, устанавливаем класс "invalid"
+      input.classList.remove("valid");
+      input.classList.add("invalid");
+    }
+  }
+

@@ -16,28 +16,24 @@ function createPhotoTable() {
             tbody.appendChild(row);
         }
         let cell = document.createElement('td');
-        let link = document.createElement('a');
-        link.href = fullImages[index]; // Устанавливаем URL-адрес ссылки
+        //let link = document.createElement('a');
+        //link.href = fullImages[index]; // Устанавливаем URL-адрес ссылки
         let img = document.createElement('img');
         img.src = miniImages[index];
         img.title = description[index];
         img.alt = description[index];
+        cell.addEventListener("click", function() {openImage(fullImages[index])});
 
         let descr = document.createElement("p");
         descr.innerText = description[index];
 
-        link.appendChild(img); // Добавляем изображение в ссылку
-        cell.appendChild(link); // Добавляем ссылку в ячейку
+        //link.appendChild(img); // Добавляем изображение в ссылку
+        //cell.appendChild(link);
+        cell.appendChild(img); // Добавляем ссылку в ячейку
         cell.appendChild(descr); // Добавляем текст в ячейку
         row.appendChild(cell);
     });
     
-    
-    //let img = document.createElement('img');
-    //img.src = miniImage[7];
-    //div.appendChild(img);
-    
-    //document.body.appendChild(img); //h
 }
 
 function createPhotoTable2() {
@@ -45,4 +41,22 @@ function createPhotoTable2() {
     var title = document.createElement("h1");
     title.innerText = "Мои картинки (Я не любитель снимать себя)";
     div.appendChild(title);
+}
+
+function openImage(imageUrl) {
+    // Получаем ссылку на элементы DOM
+    var imageContainer = document.getElementById('imageContainer');
+    var image = document.getElementById('image');
+
+    // Устанавливаем адрес изображения
+    image.src = imageUrl;
+
+    // Показываем динамически формируемое окно
+    imageContainer.style.display = 'flex';
+}
+
+function closeImage() {
+    // Скрываем динамически формируемое окно при клике
+    var imageContainer = document.getElementById('imageContainer');
+    imageContainer.style.display = 'none';
 }
