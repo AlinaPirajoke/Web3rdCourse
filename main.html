@@ -4,24 +4,34 @@
         <LINK REL="img" TYPE="text/css" HREF="theme.css">
         <meta charset="utf-8">
         <title>Рузманов Владислав</title>
+        <script src="scripts/default.js"></script>
     </head>
 
     <body>
+        <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
         <header class="header">
             <nav>
                 <ol>
                     <div style="float:left" class="headerText">
-                        <li><a href="./main.html">Главная</a></li>
-                        <li><a href="./about_me.html">Обо мне</a></li>
-                        <li><a href="./my_interests.html">Мои интересы</a></li>
+                        <li class="headerPage"><a href="./main.html">Главная</a></li>
+                        <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
+                        <li class="dropdown">
+                            <a href="./my_interests.html">Мои интересы</a>
+                            <ol class="dropdown-content">
+                                <li><a href="./my_interests.html#Программирование">Программирование</a></li>
+                                <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
+                                <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
+                            </ol>
+                        </li>       
                     </div>
                     <div style="float:left" class="headerText">
-                        <li><a href="./study.html">Учеба</a></li>
-                        <li><a href="./photobook.html">Фотоальбом</a></li>
-                        <li><a href="./contact.html">Контакт</a></li>
+                        <li class="headerPage"><a href="./study.html">Учеба</a></li>
+                        <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
+                        <li class="headerPage"><a href="./contact.html">Контакт</a></li>
                     </div>
                     <div style="float:left" class="headerText">
-                        <li><a href="./test.html">Тест по основам дискретной математики</a></li> 
+                        <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li> 
+                        <li class="headerPage"><a href="./history.html">История</a></li> 
                     </div>
                 </ol>
             </nav>
@@ -29,7 +39,7 @@
         <div class="stdText">
             <h1>Рузманов Владислав Вячеславович</h1>
             <h2>Группа ИС/б-21-1-о</h2>
-            <img src="./images/otter.jfif" width="200px" alt="literaly me" style="margin-left: 20px;"> 
+            <img src="./images/otter.png" width="200px" alt="literaly me" style="margin-left: 20px;"> 
             <p style="color: #dbdbce;
             margin-top: 1px;">Да, я выдра</p>
             <h2>Лабораторная работа №1 "Исследование возможностей языка разметки гипертекстов HTML и каскадных таблиц стилей CSS"</h2>

@@ -1,21 +1,24 @@
 <!DOCTYPE HTML>
     <head>
         <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
+        <LINK REL=STYLESHEET TYPE="text/css" HREF="calendar.css">
         <LINK REL="img" TYPE="text/css" HREF="theme.css">
         <script src="scripts/contact.js"></script>
-        <script src="scripts/time.js"></script>
+        <script src="scripts/default.js"></script>
+        <script src="scripts/calendar.js"></script>
+        <script src="scripts/default.js"></script>
         <meta charset="utf-8">
         <title>Рузманов Владислав</title>
     </head >
 
     <body onload="showDate()">
-        
+        <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
         <header class="header">
             <nav>
                 <ol>
                     <div style="float:left" class="headerText">
-                        <li><a href="./main.html">Главная</a></li>
-                        <li><a href="./about_me.html">Обо мне</a></li>
+                        <li class="headerPage"><a href="./main.html">Главная</a></li>
+                        <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
                         <li class="dropdown">
                             <a href="./my_interests.html">Мои интересы</a>
                             <ol class="dropdown-content">
@@ -26,14 +29,14 @@
                         </li>       
                     </div>
                     <div style="float:left" class="headerText">
-                        <li><a href="./study.html">Учеба</a></li>
-                        <li><a href="./photobook.html">Фотоальбом</a></li>
-                        <li><a href="./contact.html">Контакт</a></li>
+                        <li class="headerPage"><a href="./study.html">Учеба</a></li>
+                        <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
+                        <li class="headerPage"><a href="./contact.html">Контакт</a></li>
                     </div>
                     <div style="float:left" class="headerText">
-                        <li><a href="./test.html">Тест по основам дискретной математики</a></li> 
+                        <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li> 
+                        <li class="headerPage"><a href="./history.html">История</a></li> 
                     </div>
-                    <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
                 </ol>
             </nav>
         </header>
@@ -43,7 +46,7 @@
             <form METHOD=post action = mailto:alinapirajoke@gmail.com>
                 <div>
                     <p>Ваше ФИО</p>
-                    <input name="fio" type=text placeholder="Введите ФИО"></input>
+                    <input name="fio" id="fio" type=text placeholder="Введите ФИО"></input>
                 </div>
                 <div>
                     <p>Ваш пол</p>
@@ -52,14 +55,11 @@
                     <input name="radio" type=radio value="o">Другой</input>
                 </div>
                 <div>
-                    <p>Ваш возраст</p>
-                    <select name="select" size=1>
-                    <option value=1>&lt;18
-                    <option value=2>18-21
-                    <option value=3>21-31
-                    <option value=4>31-41
-                    <option value=5>&lg;41
-                    </select>
+                    <p>Ваша дата рождения</p>
+                    <input type="text" id="dateInput" class="form-control"/>
+                    <div class="container">
+                        <span id="datePickerWrapper"></span><a  class="btn btn-primary" id="label" onclick="showCalend(this)">Открыть календарь</a>
+                    </div>
                 </div>
                 <div>
                     <p>Ваш email</p>
@@ -67,7 +67,7 @@
                 </div>
                 <div>
                     <p>Ваш телефон</p>
-                    <input name="phone" type="number" placeholder="Введите телефон"></input>
+                    <input name="phone" id="phone" type="number" placeholder="Введите телефон"></input>
                 </div>
                 <div style="margin-top: 20px; display:inline-block; style: float" >
                     <button type=submit value="Проверить">Отправить</button>

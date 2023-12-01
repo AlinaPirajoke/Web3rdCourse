@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Календарь</title>
+  <style>
+    #calendar {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <select id="month"></select>
+    <select id="year"></select>
+    <button id="show-calendar">Показать календарь</button>
+  </div>
+
+  <div id="calendar"></div>
+
+  <script>
+    // Создаем список для месяцев
+    var monthSelect = document.getElementById("month");
+    var months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+    // Добавляем опции для месяцев
+    for (var i = 0; i < months.length; i++) {
+      var option = document.createElement("option");
+      option.text = months[i];
+      option.value = i;
+      monthSelect.add(option);
+    }
+
+    // Создаем список для годов
+    var yearSelect = document.getElementById("year");
+    var currentYear = new Date().getFullYear();
+
+    // Добавляем опции для годов (10 лет назад и 10 лет вперед)
+    for (var i = currentYear - 10; i <= currentYear + 10; i++) {
+      var option = document.createElement("option");
+      option.text = i;
+      option.value = i;
+      yearSelect.add(option);
+    }
+
+    // Получаем кнопку "Показать календарь" и элемент календаря
+    var showCalendarButton = document.getElementById("show-calendar");
+    var calendar = document.getElementById("calendar");
+
+    // Добавляем обработчик клика по кнопке
+    showCalendarButton.addEventListener("click", function () {
+      // Очищаем календарь перед отображением
+      calendar.innerHTML = "";
+
+      // Получаем значение выбранного месяца и года
+      var selectedMonth = monthSelect.value;
+      var selectedYear = yearSelect.value;
+
+      // Создаем дату выбранного месяца и года
+      var date = new Date(selectedYear, selectedMonth, 1);
+
+      // Добавляем заголовок календаря
+      var header = document.createElement("h3");
+      header.textContent = months[selectedMonth] + " " + selectedYear;
+      calendar.appendChild(header);
+
+      // Создаем таблицу для календаря
+      var table = document.createElement("table");
+
+      // Добавляем заголовки дней недели
+      var thead = document.createElement("thead");
+      var weekdays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
+      var tr = document.createElement("tr");
+      for (var i = 0; i < 7; i++) {
+        var th = document.createElement("th");
+        th.textContent = weekdays[i];
+        tr.appendChild(th);
+      }
+      thead.appendChild(tr);
+      table.appendChild(thead);
+
+      // Вычисляем количество дней в месяце
+      var daysInMonth = new Date(selectedYear, parseInt(selectedMonth) + 1, 0).getDate();
+
+      // Вычисляем день недели первого дня месяца
+      var firstDayOfWeek = date.getDay();
+
+      // Создаем ячейки с числами дней
+      var tbody = document.createElement("tbody");
+      var day = 1;
+
+      for (var i = 0; i < 6; i++) {
+        var tr = document.createElement("tr");
+
+        for (var j = 0; j < 7; j++) {
+          var td = document.createElement("td");
+
+          if (i === 0 && j < firstDayOfWeek) {
+            // Пустая ячейка до первого числа месяца
+            td.textContent = "";
+          } else if (day > daysInMonth) {
+            // Пустая ячейка после последнего числа месяца
+            break;
+          } else {
+            td.textContent = day;
+            day++;
+          }
+
+          tr.appendChild(td);
+        }
+
+        tbody.appendChild(tr);
+      }
+
+      table.appendChild(tbody);
+      calendar.appendChild(table);
+    })
+  </script>
+</body>
+
+</html>
