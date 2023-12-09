@@ -1,77 +1,80 @@
 <!DOCTYPE HTML>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
-        <LINK REL="img" TYPE="text/css" HREF="theme.css">
-        <script src="scripts/test.js"></script>
-        <meta charset="utf-8">
-        <title>Рузманов Владислав</title>
-        <script src="scripts/default.js"></script>
-    </head>
 
-    <body>
-        <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
-        <header class="header">
-            <nav>
-                <ol>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./main.html">Главная</a></li>
-                        <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
-                        <li class="dropdown">
-                            <a href="./my_interests.html">Мои интересы</a>
-                            <ol class="dropdown-content">
-                                <li><a href="./my_interests.html#Программирование">Программирование</a></li>
-                                <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
-                                <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
-                            </ol>
-                        </li>       
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./study.html">Учеба</a></li>
-                        <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
-                        <li class="headerPage"><a href="./contact.html">Контакт</a></li>
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li> 
-                        <li class="headerPage"><a href="./history.html">История</a></li> 
-                    </div>
-                </ol>
-            </nav>
-        </header>
-        <div class="middleDiv">
-            <div class="form" >
-                <h1>Пройдите тест по основам дискретной математики!<br></h1>
-                <form METHOD=post action = mailto:alinapirajoke@gmail.com>
-                    <div>
-                        <p>Каково количество различных перестановок букв в слове “MATH”?</p>
-                        <input name="radio" type=radio value="6">6</input>
-                        <input name="radio" type=radio value="12">12</input>
-                        <input name="radio" type=radio value="24">24</input>
-                        <input name="radio" type=radio value="120">120</input>
-                    </div>
-                    <div>
-                        <p>Какое максимальное количество ребер может быть в простом графе с n вершинами?</p>
-                        <select name="select" size=1>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
+    <LINK REL="img" TYPE="text/css" HREF="theme.css">
+    <script src="scripts/test.js"></script>
+    <meta charset="utf-8">
+    <title>Рузманов Владислав</title>
+    <script src="scripts/default.js"></script>
+</head>
+
+<body>
+    <div class="lonely" id="date">
+        <p id="dateLabel">asdf</p>
+    </div>
+    <header class="header">
+        <nav>
+            <ol>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./main.html">Главная</a></li>
+                    <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
+                    <li class="dropdown">
+                        <a href="./my_interests.html">Мои интересы</a>
+                        <ol class="dropdown-content">
+                            <li><a href="./my_interests.html#Программирование">Программирование</a></li>
+                            <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
+                            <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
+                        </ol>
+                    </li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./study.html">Учеба</a></li>
+                    <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
+                    <li class="headerPage"><a href="./contact.html">Контакт</a></li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li>
+                    <li class="headerPage"><a href="./history.html">История</a></li>
+                </div>
+            </ol>
+        </nav>
+    </header>
+    <div class="middleDiv">
+        <div class="form">
+            <h1>Пройдите тест по основам дискретной математики!<br></h1>
+            <form METHOD=post action=mailto:alinapirajoke@gmail.com>
+                <div>
+                    <p>Каково количество различных перестановок букв в слове “MATH”?</p>
+                    <input name="radio" type=radio value="6">6</input>
+                    <input name="radio" type=radio value="12">12</input>
+                    <input name="radio" type=radio value="24">24</input>
+                    <input name="radio" type=radio value="120">120</input>
+                </div>
+                <div>
+                    <p>Какое максимальное количество ребер может быть в простом графе с n вершинами?</p>
+                    <select name="select" size=1>
                         <option value=1>n - 1
                         <option value=2>n(n - 1) / 2
                         <option value=3>n(n + 1) / 2
                         <option value=4>n^2 - n
                         <option value=5>n^2 + n
-                        </select>
-                    </div>
-                    <div>
-                        <p>Каково количество различных графов, которые можно построить на множестве из 3 вершин?</p>
-                        <textarea name="textarea" rows=2 placeholder="Ответ" id = "3rd answer">
+                    </select>
+                </div>
+                <div>
+                    <p>Каково количество различных графов, которые можно построить на множестве из 3 вершин?</p>
+                    <textarea name="textarea" rows=2 placeholder="Ответ" id="3rd answer">
                         </textarea>
-                    </div>
-                    <div>
-                        <p>Введите ваше фио</p>
-                        <textarea name="textarea" placeholder="Ответ">
+                </div>
+                <div>
+                    <p>Введите ваше фио</p>
+                    <textarea name="textarea" placeholder="Ответ">
                         </textarea>
-                    </div>
-                    <div>
-                        <p>Введите вашу группу</p>
-                        <select name="select" size=1>
+                </div>
+                <div>
+                    <p>Введите вашу группу</p>
+                    <select name="select" size=1>
                         <option value=1>ИС/б-21-1-о</option>
                         <option value=2>ИС/б-21-2-о</option>
                         <option value=3>ИС/б-21-3-о</option>
@@ -80,14 +83,15 @@
                         <option value=6>ИС/б-20-2-о</option>
                         <option value=7>ИС/б-20-3-о</option>
                         <option value=8>ПИ/б-20-1-о</option>
-                        </select>
-                    </div>
-                    <div style="margin-top: 20px; display:inline-block; style: float">
-                        <button type=submit value="Проверить">Отправить</button>
-			<button type=button onClick="window.location.reload();" value="Очистить">Очистить</button>
-                    </div>
-                </form>
-            </div>
+                    </select>
+                </div>
+                <div style="margin-top: 20px; display:inline-block; style: float">
+                    <button type=submit value="Проверить">Отправить</button>
+                    <button type=button onClick="window.location.reload();" value="Очистить">Очистить</button>
+                </div>
+            </form>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
