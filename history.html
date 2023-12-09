@@ -1,58 +1,63 @@
 <!DOCTYPE HTML>
-    <head>
-        <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
-        <LINK REL="img" TYPE="text/css" HREF="theme.css">
-        <script src="scripts/history.js"></script>
-        <meta charset="utf-8">
-        <title>Рузманов Владислав</title>
-        <script src="scripts/default.js"></script>
-    </head>
 
-    <body>
-        <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
-        <header class="header">
-            <nav>
-                <ol>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./main.html">Главная</a></li>
-                        <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
-                        <li class="dropdown">
-                            <a href="./my_interests.html">Мои интересы</a>
-                            <ol class="dropdown-content">
-                                <li><a href="./my_interests.html#Программирование">Программирование</a></li>
-                                <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
-                                <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
-                            </ol>
-                        </li>       
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./study.html">Учеба</a></li>
-                        <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
-                        <li class="headerPage"><a href="./contact.html">Контакт</a></li>
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li> 
-                        <li class="headerPage"><a href="./history.html">История</a></li> 
-                    </div>
-                </ol>
-            </nav>
-        </header>
-        <h2>История за все время</h2>
-        <table id="sessionHistory">
-            <tr>
-                <th>Страница-1</th>
-                <th>Количество посещений</th>
-            </tr>
-            <!-- Таблица для истории текущего сеанса будет здесь -->
-        </table>
-    
-        <h2>История текущего сеанса</h2>
-        <table id="allTimeHistory">
-            <tr>
-                <th>Страница-1</th>
-                <th>Количество посещений</th>
-            </tr>
-            <!-- Таблица для истории за все время будет здесь -->
-        </table>
-    </body>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
+    <LINK REL="img" TYPE="text/css" HREF="theme.css">
+    <script src="scripts/history.js"></script>
+    <meta charset="utf-8">
+    <title>Рузманов Владислав</title>
+    <script src="scripts/default.js"></script>
+</head>
+
+<body>
+    <div class="lonely" id="date">
+        <p id="dateLabel">asdf</p>
+    </div>
+    <header class="header">
+        <nav>
+            <ol>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./main.html">Главная</a></li>
+                    <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
+                    <li class="dropdown">
+                        <a href="./my_interests.html">Мои интересы</a>
+                        <ol class="dropdown-content">
+                            <li><a href="./my_interests.html#Программирование">Программирование</a></li>
+                            <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
+                            <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
+                        </ol>
+                    </li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./study.html">Учеба</a></li>
+                    <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
+                    <li class="headerPage"><a href="./contact.html">Контакт</a></li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li>
+                    <li class="headerPage"><a href="./history.html">История</a></li>
+                </div>
+            </ol>
+        </nav>
+    </header>
+    <h2>История за все время</h2>
+    <table id="sessionHistory">
+        <tr>
+            <th>Страница-1</th>
+            <th>Количество посещений</th>
+        </tr>
+        <!-- Таблица для истории текущего сеанса будет здесь -->
+    </table>
+
+    <h2>История текущего сеанса</h2>
+    <table id="allTimeHistory">
+        <tr>
+            <th>Страница-1</th>
+            <th>Количество посещений</th>
+        </tr>
+        <!-- Таблица для истории за все время будет здесь -->
+    </table>
+</body>
+
 </html>

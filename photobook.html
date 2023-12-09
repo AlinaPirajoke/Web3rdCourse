@@ -1,53 +1,60 @@
 <!DOCTYPE HTML>
-    <head>
-        <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
-        <LINK REL="img" TYPE="text/css" HREF="theme.css">
-        <meta charset="utf-8">
-        <title>Рузманов Владислав</title>
-        <script src="scripts/photobook.js"></script>
-        <script src="scripts/default.js"></script>
-    </head>
 
-    <body onload="createPhotoTable()">
-        <div id="imageContainer" onclick="closeImage()">
-            <img id="image" src="" alt="Открытое изображение">
-        </div>
-        <div class="lonely" id="date"><p id="dateLabel">asdf</p></div>
-        <header class="header">
-            <nav>
-                <ol>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./main.html">Главная</a></li>
-                        <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
-                        <li class="dropdown">
-                            <a href="./my_interests.html">Мои интересы</a>
-                            <ol class="dropdown-content">
-                                <li><a href="./my_interests.html#Программирование">Программирование</a></li>
-                                <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
-                                <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
-                            </ol>
-                        </li>       
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./study.html">Учеба</a></li>
-                        <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
-                        <li class="headerPage"><a href="./contact.html">Контакт</a></li>
-                    </div>
-                    <div style="float:left" class="headerText">
-                        <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li> 
-                        <li class="headerPage"><a href="./history.html">История</a></li> 
-                    </div>
-                </ol>
-            </nav>
-        </header>
-        <div class="middleDiv">
-            <div class="stdText" id = "photos" name="photos">
-                <!--<button onclick="createPhotoTable()">Показать фото</button>-->
-                <h1>"Мои картинки (Я не любитель снимать себя)"</h1>
-                <table class="tablePhoto" style="display: flex; justify-content: center;" id = "photoTable">
-                    
-                </table>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <LINK REL=STYLESHEET TYPE="text/css" HREF="theme.css">
+    <LINK REL="img" TYPE="text/css" HREF="theme.css">
+    <meta charset="utf-8">
+    <title>Рузманов Владислав</title>
+    <script src="scripts/photobook.js"></script>
+    <script src="scripts/default.js"></script>
+</head>
+
+<body>
+    <div id="imageContainer" onclick="closeImage()">
+        <img id="image" src="" alt="Открытое изображение">
+    </div>
+    <div class="lonely" id="date">
+        <p id="dateLabel">asdf</p>
+    </div>
+    <header class="header">
+        <nav>
+            <ol>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./main.html">Главная</a></li>
+                    <li class="headerPage"><a href="./about_me.html">Обо мне</a></li>
+                    <li class="dropdown">
+                        <a href="./my_interests.html">Мои интересы</a>
+                        <ol class="dropdown-content">
+                            <li><a href="./my_interests.html#Программирование">Программирование</a></li>
+                            <li><a href="./my_interests.html#Изучение языков">Изучение языков</a></li>
+                            <li><a href="./my_interests.html#Глубокое обучение">Глубокое обучение</a></li>
+                        </ol>
+                    </li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./study.html">Учеба</a></li>
+                    <li class="headerPage"><a href="./photobook.html">Фотоальбом</a></li>
+                    <li class="headerPage"><a href="./contact.html">Контакт</a></li>
+                </div>
+                <div style="float:left" class="headerText">
+                    <li class="headerPage"><a href="./test.html">Тест по основам дискретной математики</a></li>
+                    <li class="headerPage"><a href="./history.html">История</a></li>
+                </div>
+            </ol>
+        </nav>
+    </header>
+    <div class="middleDiv">
+        <div class="vertical-center-div" id="photos" name="photos">
+            <div class="slider" , id="slider"></div>
+            <p class="slider-title" id="title">Название</p>
+            <div class="horizontal-center-div">
+                <p class="slider-prev" id="slider-prev">←</p>
+                <p class="slider-next" id="slider-next">→</p>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -1,7 +1,7 @@
 // Получаем текущий путь страницы и сохраняем в переменную
-const currentPage2 = window.location.pathname; 
+const currentPage2 = window.location.pathname;
 
-function onLoad(){
+function onLoad() {
     updateSessionHistory(currentPage2);
     updateAllTimeHistory(currentPage2);
     showDate();
