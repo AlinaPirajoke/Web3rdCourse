@@ -5,11 +5,11 @@ $(document).ready(function () {
         console.log("Мышка здесь");
         var _this = this;
         $(this).popover('show');
-        setTimeout(function () {
-            if (!$(_this).is(':hover')) {
-                $(_this).popover('hide');
-            }
-        }, 3000);
+        // setTimeout(function () {
+        //     if (!$(_this).is(':hover')) {
+        //         $(_this).popover('hide');
+        //     }
+        // }, 3000);
     });
 
     $('[data-toggle="popover"]').on('mouseleave', function () {
@@ -19,7 +19,7 @@ $(document).ready(function () {
             if (!$('.popover:hover').length) {
                 $(_this).popover('hide');
             }
-        }, 3000);
+        }, 30000);
     });
 
     var modal = $("#myModal");

@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('form').addEventListener('submit', function (event) {
+$(document).ready(function () {
+    $('#form').submit(function (event) {
 
         var formElements = this.elements;
         for (var i = 0; i < formElements.length; i++) {

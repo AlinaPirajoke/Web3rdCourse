@@ -1,11 +1,11 @@
 // Получаем текущий путь страницы и сохраняем в переменную
 const currentPage2 = window.location.pathname;
 
-function onLoad() {
+$(document).ready(function () {
     updateSessionHistory(currentPage2);
     updateAllTimeHistory(currentPage2);
     showDate();
-}
+});
 
 // Функция для обновления истории текущего сеанса в локальном хранилище
 function updateSessionHistory(page) {
@@ -33,5 +33,3 @@ function showDate() {
     console.log(date);
     label.textContent = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
 }
-
-window.addEventListener('load', () => { onLoad(); });
