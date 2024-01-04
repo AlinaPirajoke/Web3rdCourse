@@ -19,7 +19,7 @@ $(document).ready(function () {
             if (!$('.popover:hover').length) {
                 $(_this).popover('hide');
             }
-        }, 30000);
+        }, 1000);
     });
 
     var modal = $("#myModal");

@@ -23,27 +23,23 @@ function printInterests(){
 }
 
 function printElement(label, ...pars){
-    var content = document.getElementById("content");
-    var page = document.getElementById("page");
+    var content = $("#content");
+    var page = $("#page");
     
-    var div = document.getElementById(label);
-    div.setAttribute("class", "piece");
-    div.id = label;
+    var div = $("#" + label);
+    div.attr("class", "piece");
+    //div.id = label;
 
-    elabl = document.createElement("h3");
-    elabl.textContent = label;
-    div.appendChild(elabl);
+    elabl = $("<h3>").text(label);
+    div.append(elabl);
 
     for(var p in pars){
-        par = document.createElement("p");
-        par.textContent = pars[p];
-        div.appendChild(par);
+        par = $("<p>").text(pars[p]);;
+        div.append(par);
     }
 
-    var contentP = document.createElement("li");
-    var contentLink = document.createElement("a");
-    contentLink.href = "#" + div.id;
-    contentLink.textContent = label;
-    contentP.appendChild(contentLink);
-    content.appendChild(contentP);
+    var contentP = $("<li>");
+    var contentLink = $("<a>").text(label).attr("href", "#" + label);
+    contentP.append(contentLink);
+    content.append(contentP);
 }
