@@ -62,10 +62,14 @@ export default {
     next() {
       if (this.index >= this.photos.miniImages.length - 1) this.index = 0
       else this.index++
+      this.$store.dispatch('ADD_COUNT')
     },
     previous() {
-      if (this.index < 0) this.index = this.photos.miniImages.length - 1
+      if (this.index <= 0) this.index = this.photos.miniImages.length - 1
       else this.index--
+      console.log(this.$store.getters.COUNT)
+      this.$store.dispatch('ADD_COUNT')
+      //this.$store.actions.ADD_COUNT()
     }
   }
 }
@@ -81,6 +85,7 @@ export default {
 
     <div class="horizontal-center-div">
       <p class="slider-prev" @click="previous" id="slider-prev">←</p>
+      <p  class="slider-title"> {{ this.$store.getters.COUNT }} </p>
       <p class="slider-next" @click="next" id="slider-next">→</p>
     </div>
   </div>
